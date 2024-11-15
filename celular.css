@@ -1,0 +1,27 @@
+body {
+    background-image: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Organizar melhor a img*/
+img {
+    width: auto;
+}
+
+.container {
+    border-radius: 0px;
+    min-width: 320px;
+    width: auto;
+    min-height: 700px;
+    /* position:  */
+    height: auto;
+    background-color: white;
+}
+
+button {
+    width: 125px;
+}
