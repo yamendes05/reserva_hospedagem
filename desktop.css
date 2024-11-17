@@ -1,0 +1,115 @@
+* {
+    font-family: "DM Sans";
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+img{
+    height: auto;
+    width: 300px;
+}
+
+/* Manipulando a logo*/
+
+#logo {
+    position: absolute;
+    max-width: 100px;
+    margin: 8px;
+}
+
+/* Manipulando a barra de navegação */
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 100%; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.menu-lista {
+    /* background-color: black; Só para visualização, enquanto não está acima do banner */
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 5px;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Main */
+
+#home {
+    background-image: url(imagens/banner-1.jpg);
+
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+}
+
+
+/* Área dos hotéis */
+
+
+#hoteis > h2, h3 {
+    text-align: center;
+}
+
+.container-hoteis {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    gap: 80px;
+}
+
+.hotel > img {
+    width: 290px;
+    height: 185px;
+}
+
+#btn-reservar {
+    height: 30px;
+    width: 150px;
+
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    
+    background-color: #131515;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+
+    align-content: center;
+}
+
+/* footer */
+
+#rodape {
+    background-color: #131515;
+    color: #FFFAFB;
+    text-align: center;
+
+    margin-top: 70px;
+    padding: 15px;
+    height: 1200px;
+}
+
+
+/* Tentativa falha de ajeitar img do rodapé
+.container > img {
+    top: 8px;
+    left: 16px;
+} */

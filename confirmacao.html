@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Reserva</title>
+    <link rel="stylesheet" href="estilofina.css">
+</head>
+<body>
+
+
+    <main>
+        <h2>Reserva Confirmada!</h2>
+        <p>Obrigado por reservar com a gente. Sua reserva foi realizada com sucesso.</p>
+      
+
+        <button onclick="window.location.href='index.html'">Voltar à Página Inicial</button>
+    </main>
+
+    <footer>
+        <footer id="rodape">
+            <div class="container">
+
+                <div class="notificacoes">
+                    <label for="email">Deseja receber emails com promoções</label>
+                    <input type="email" name="email" id="email">
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+            <p>Projeto para fins comerciais</p>
+        </footer>
+    </footer>
+
+    <script>
+        // Carregar os dados da reserva armazenados no localStorage
+        window.onload = function() {
+            const data = localStorage.getItem('reservaData');
+            const hospedes = localStorage.getItem('reservaHospedes');
+            
+            // Exibir os dados de reserva na página de confirmação
+            document.getElementById('data-reserva').textContent = data;
+            document.getElementById('hospedes-reserva').textContent = hospedes;
+        }
+    </script>
+</body>
+</html>

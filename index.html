@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/1.png" type="image/x-icon">
     <title>IDestiny - Sua plataforma ideal de reservas de hotéis</title>
+    <script src="javascript.js"></script>
+
     <!-- Arquivos de Estilizações -->
+<<<<<<< HEAD
      <link rel="stylesheet" href="/styles/celular.css">
      <link rel="stylesheet" href="/styles/tablet.css">
      <link rel="stylesheet" href="/styles/desktop.css">
      <!-- Arquivo para configurações gerais -->
      <link rel="stylesheet" href="config.css">
+=======
+    <link rel="stylesheet" href="/celular.css">
+    <link rel="stylesheet" href="/tablet.css">
+    <link rel="stylesheet" href="desktop.css">
+
+    <!-- Arquivo para configurações gerais -->
+    <link rel="stylesheet" href="config.css">
+
+>>>>>>> 6139d07267e7834583e19af0cc2087b402d86f8a
     <!-- Importação de Fontes -> "DM Sans" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +32,9 @@
 </head>
 <body>
     <header id="cabecalho">
-        <div class="logo"><img src="imagens/2.png" alt="Logo da IDestiny"></div>
+        <!-- Imagens do cabeçalho (logo e banner) -->
+        <div class="logo"><img src="imagens/1.png" alt="Logo da IDestiny" id="logo"></div>
+        
         <nav id="menu">
             <!-- Menu hmabúrguer para celulares -->
             <button id="burguer-menu">
@@ -47,8 +61,10 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="home">
+            <!-- <img src="imagens/banner-1.jpg" alt="" class="banner"> -->
             <h1>Descubra o destino perfeito para sua pausa relaxante</h1>
         </section>
         <section id="reserva">
@@ -103,8 +119,8 @@
                             <span class="local"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i> <i class='bx bxs-map'></i> São Paulo</span>
                         </div>
                     </div>
-                    <button id="btn-reservar">Reservar</button>
-                </div>
+                    <button id="btn-reservar" onclick='reservarHotel("Bahamas", "São Paulo", "1 Cama de Casal", "1 Banheiro")'>Reservar</button>
+            </div>
 
                 <div class="hotel">
                     <img src="imagens/palazzo.jpg" alt="Imagem do Resort Palazzo">
@@ -122,7 +138,7 @@
                             <span class="local"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i> <i class='bx bxs-map'></i> Bahia</span>
                         </div>
                     </div>
-                    <button id="btn-reservar">Reservar</button>
+                    <button id="btn-reservar" onclick='reservarHotel("Resort Palazzo", "São Paulo", "Refeições inclusas", "Piscinas")'>Reservar</button>
                 </div>
 
                 <div class="hotel">
@@ -140,7 +156,7 @@
                             <span class="local"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i> <i class='bx bxs-map'></i> Recife</span>
                         </div>
                     </div>
-                    <button id="btn-reservar">Reservar</button>
+                    <button id="btn-reservar" onclick='reservarHotel("Hotel Piotto", "São Paulo", "3 Camas", "2 Banheiro")'>Reservar</button>
                 </div>
 
                 <div class="hotel">
@@ -158,7 +174,7 @@
                             <span class="local"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i> <i class='bx bxs-map'></i> Salvador</span>
                         </div>
                     </div>
-                    <button id="btn-reservar">Reservar</button>
+                    <button id="btn-reservar" onclick='reservarHotel("Chagatti", "bahia", "1 Suítes", "2 Banheiros")'>Reservar</button>
                 </div>
 
                 <div class="hotel">
@@ -176,7 +192,7 @@
                             <span class="local"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i> <i class='bx bxs-map'></i> Jericoacoara - PE</span>
                         </div>
                     </div>
-                    <button id="btn-reservar">Reservar</button>
+                    <button id="btn-reservar" onclick='reservarHotel("Albuquerque’s", "Minas Gerais", "2 Suítes e mais 2 camas solo", "2 Banheiro")'>Reservar</button>
                 </div>
 
                 <div class="hotel">
@@ -194,7 +210,7 @@
                             <span class="local"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i> <i class='bx bxs-map'></i> Curitiba - PR</span>
                         </div>
                     </div>
-                    <button id="btn-reservar">Reservar</button>
+                    <button id="btn-reservar" onclick='reservarHotel("Eden Royale", "Rio de janeiro", "1 Suíte", "Refeições Inclusas")'>Reservar</button>
                 </div>
             </div>
         </section>

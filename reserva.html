@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="estiloReserva.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+  <header id="cabecalho">
+      <!-- Imagens do cabeçalho (logo e banner) -->
+      <div class="logo"><img src="imagens/1.png" alt="Logo da IDestiny" id="logo"></div>
+      
+      <nav id="menu">
+          <ul class="menu-lista">
+              <li class="menu-item">
+                  <a href="#" class="menu-link">Quartos</a>
+              </li>
+              <li class="menu-item">
+                  <a href="#" class="menu-link">Reservar</a>
+              </li>
+              <li class="menu-item">
+                  <a href="#" class="menu-link">Minhas Reservas</a>
+              </li>
+              <!-- Mostrará o nome do usuário -->
+              <li class="menu-item">
+                  <p class="nome-usuario"></p>
+                  <span class="icone-usuario"><i class='bx bxs-user-circle'></i></span>
+              </li>
+          </ul>
+      </nav>
+  </header>
+  
+  <main>
+    <div class="hotel-info">
+        <h2 id="hotel-nome"></h2>
+        <p><strong>Local:</strong> <span id="hotel-local"></span></p>
+        <p><strong>Detalhes:</strong></p>
+        <ul>
+            <li id="hotel-cama"></li>
+            <li id="hotel-banheiro"></li>
+        </ul>
+    </div>
+    <form onsubmit="confirmarReserva(event)">
+        <div>
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+        </div>
+        <div>
+            <label for="hospedes">Hóspedes:</label>
+            <input type="number" id="hospedes" min="1" value="1" required>
+        </div>
+        <button type="submit">Confirmar Reserva</button>
+    </form>
+  </main>
+  <footer>
+    <footer id="rodape">
+        <div class="container">
+          <img src="imagens/1.png" alt="">
+          <div class="notificacoes">
+              <label for="email">Deseja receber emails com promoções</label>
+              <input type="email" name="email" id="email">
+              <button type="submit">Enviar</button>
+          </div>
+        </div>
+        <p>Projeto para fins comerciais</p>
+    </footer>
+  </footer>
+</body>
+</html>
