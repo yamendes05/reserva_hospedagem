@@ -1,3 +1,141 @@
 @media (max-width:768px) {
+    #cabecalho{
+        height: 10vh;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0rem;
+        left: 0;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #cabecalho > .logo img{
+        height: auto;
+        width: 80px;
+    }
+
+    #menu{
+        display: flex;
+        justify-content: end;
+        width: 600px;
+        padding-right: 1.25rem;
+    }
+
+    #burguer-menu{
+        height: 50px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .linha{
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+
+    /* Estilo inicial do menu */
+    .menu-lista {
+        height: 300px;
+        width: 200px;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        background-color: #fff;
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-20px); /* Movido para fora da posição inicial */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Animação suave */
+        pointer-events: none; /* Desativa interações quando invisível */
+    }
+
+
+    .menu-lista.active {
+        opacity: 1;
+        transform: translateY(0); 
+        pointer-events: auto; 
+    }
+
+    /* Botão hambúrguer com transição para o formato "X" */
+    #burguer-menu .linha {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    #burguer-menu.active .linha:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    #burguer-menu.active .linha:nth-child(2) {
+        opacity: 0; /* Esconde a linha do meio */
+    }
+
+    #burguer-menu.active .linha:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+    .menu-link{
+        text-decoration: none;
+        color: #161616;
+    }
+    /* Seção home */
+    #home {
+        position: relative; /* Necessário para posicionar o ::before */
+        height: 70vh;
+        width: 100%;
+        z-index: 0;
+        background: url(/imagens/banner-1.jpg) center center no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.301);
+        z-index: 1; 
+        pointer-events: none; 
+    }
+
   
+    /* Para o conteúdo ficar acima da camada escura */
+    #home > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    #home > h1{
+        margin-bottom: 10rem;
+        width: 360px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .bxs-user-circle{
+        font-size: 30px;
+        color: #161616;
+    }
+    /* Formulário de rederva */
+    
 }
