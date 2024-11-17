@@ -1,0 +1,122 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+#cabecalho {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+#logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Main */
+main {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000; /* Verde para sucesso */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.notificacoes {
+    display: flex;
+    align-items: center;
+}
+
+.notificacoes input[type="email"] {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 200px;
+}
+
+.notificacoes button {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notificacoes button:hover {
+    background-color: #000000;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Adiciona espaço extra entre as seções */
+main, #rodape {
+    margin-bottom: 20px;
+}
