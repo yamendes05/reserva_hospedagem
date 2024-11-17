@@ -1,0 +1,42 @@
+@media (min-width:1200px) {
+    #cabecalho{
+        height: 10vh;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+    }
+    
+    #cabecalho > .logo img{
+        height: auto;
+        width: 80px;
+    }
+
+    #menu{
+        width: 600px;
+        background-color: red;
+    }
+
+    .menu-lista{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .menu-link{
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /* Seção home */
+    #home{
+        height: 100vh;
+        width: 100%;
+        background:url(/imagens/banner-1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+}

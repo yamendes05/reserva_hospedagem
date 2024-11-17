@@ -1,5 +1,9 @@
 *{
+    padding: 0;
+    margin: 0;
     font-family: "DM Sans";
+    text-decoration: none;
+    list-style: none;
 }
 img{
     height: auto;
