@@ -9,3 +9,7 @@ img{
     height: auto;
     width: 300px;
 }
+
+label,input{
+    color: #fff;
+}
