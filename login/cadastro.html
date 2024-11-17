@@ -5,48 +5,77 @@
     <link rel="shortcut icon" href="/imagens/1.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="estilo.css"> <!-- Corrigido o nome do arquivo CSS -->
-    <link rel="stylesheet" href="celular.css"> <!-- CSS para dispositivos menores (celulares)-->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="celular.css">
     <link rel="stylesheet" href="tablet.css">
     <link rel="stylesheet" href="desktop.css">
+    <script src="server.js"></script>
 
     <title>Criar Conta</title>
-     <!-- Importação de Fontes -> "DM Sans" -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <img src="../imagens/banner-2.jpg" alt="" class="banner"> <!-- Substituir a img aq!-->
+        <img src="../imagens/banner-2.jpg" alt="" class="banner">
         <div class="container">
-            <form action="">
+            <form id="formCadastro">
                 <h1>Criar Conta</h1>
                 <p>Seja bem vindo à sua plataforma ideal para reserva</p>
-                
+
                 <div>
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome"  required>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
-                
+
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email"  required>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                
+
                 <div>
                     <label for="telefone">Telefone</label>
-                    <input type="text" id="telefone" name="telefone"  required>
+                    <input type="text" id="telefone" name="telefone" required>
                 </div>
-                
+
                 <div>
                     <label for="senha">Criar Senha</label>
-                    <input type="password" id="senha" name="senha"  required>
+                    <input type="password" id="senha" name="senha" required>
                 </div>
-                
+
                 <button type="submit">Concluir</button>
             </form>
         </div>
     </main>
+
+    <script>
+        document.getElementById('formCadastro').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Coleta os dados dos inputs
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const senha = document.getElementById('senha').value;
+
+            // Cria um objeto com os dados
+            const usuario = {
+                nome: nome,
+                email: email,
+                telefone: telefone,
+                senha: senha
+            };
+
+            // Armazena o objeto no localStorage
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            usuarios.push(usuario);
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            // Alerta de sucesso e limpa o formulário
+            alert('Conta criada com sucesso!');
+            document.getElementById('formCadastro').reset();
+        });
+    </script>
 </body>
 </html>
